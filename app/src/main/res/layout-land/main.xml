@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.example.android.contadordepassageiros.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_gol_nome_land" />
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Contador" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pax_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="56sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textColor="#000000"
+            android:textSize="56sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/colos_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="56sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/LeftButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="tres"
+                android:text="@string/button_3_pax" />
+
+
+            <Button
+                style="@style/LeftButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="dois"
+                android:text="@string/button_2_pax" />
+
+
+            <Button
+                style="@style/LeftButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="um"
+                android:text="@string/button_1_pax" />
+
+
+            <Button
+                style="@style/LeftButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="umColo"
+                android:text="@string/button_1_colo" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/RightButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="tres"
+                android:text="@string/button_3_pax" />
+
+
+            <Button
+                style="@style/RightButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="dois"
+                android:text="@string/button_2_pax" />
+
+
+            <Button
+                style="@style/RightButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="um"
+                android:text="@string/button_1_pax" />
+
+
+            <Button
+                style="@style/RightButtonsStyle"
+                android:layout_weight="1"
+                android:onClick="umColo"
+                android:text="@string/button_1_colo" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="#FF5A00"
+        android:onClick="reiniciar"
+        android:text="@string/reiniciar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>

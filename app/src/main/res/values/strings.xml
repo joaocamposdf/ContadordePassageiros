@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Contador de Passageiros</string>
+    <string name="Contador">Contador de Passageiros</string>
+    <string name="EscolhaLayout">Escolha seu layout:</string>
+    <string name="button_3_pax">+ 3 pax</string>
+    <string name="button_2_pax">+ 2 pax</string>
+    <string name="button_1_pax">+ 1 pax</string>
+    <string name="button_1_colo">+ 1 colo</string>
+    <string name="reiniciar">Reiniciar</string>
+    <string name="retrato">Retrato</string>
+    <string name="paisagem">Paisagem</string>
+
+</resources>
