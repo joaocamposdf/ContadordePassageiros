@@ -9,5 +9,12 @@
     <string name="reiniciar">Reiniciar</string>
     <string name="retrato">Retrato</string>
     <string name="paisagem">Paisagem</string>
+    <string name="nao">Não</string>
+    <string name="sim">Sim</string>
+    <string name="confirm_closing">Tem certeza que deseja encerrar a contagem?</string>
+    <string name="finish_counting">Encerrar Contagem</string>
+    <string name="reset_couting">Reiniciar contagem</string>
+    <string name="confirm_reset">Deseja reiniciar a contagem de passageiros ?</string>
+    <string name="reseting">Reiniciando</string>
 
 </resources>

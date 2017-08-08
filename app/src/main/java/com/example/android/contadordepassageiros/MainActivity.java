@@ -1,8 +1,8 @@
-/**
- * Este app foi criado para ajudar os comissários a contar os passageiros antes do voo.
- * This app was created to help flight attends counting the passengers before the flight.
- * Desenvolvido por João Pedro Ferreira Campos. Última atualização 17-05-17.
- * Developed by João Pedro Ferreira Campos. Last update 17-05-17.
+/*
+  Este app foi criado para ajudar os comissários a contar os passageiros antes do voo.
+  This app was created to help flight attends counting the passengers before the flight.
+  Desenvolvido por João Pedro Ferreira Campos. Última atualização 17-05-17.
+  Developed by João Pedro Ferreira Campos. Last update 17-05-17.
  */
 
 package com.example.android.contadordepassageiros;
@@ -165,20 +165,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void reiniciar(View view) {
         new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme)
-                .setTitle("Reiniciar contagem")
-                .setMessage("Deseja reiniciar a contagem de passageiros ?")
+                .setTitle(R.string.reset_couting)
+                .setMessage(R.string.confirm_reset)
                 .setIcon(android.R.drawable.ic_menu_revert)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.sim, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, "Reiniciando", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, R.string.reseting, Toast.LENGTH_SHORT).show();
                         pax = 0;
                         displayContagem();
                         colo = 0;
                         displayColos();
                     }
                 })
-                .setNegativeButton(android.R.string.cancel, null).show();
+                .setNegativeButton(R.string.nao, null).show();
     }
 
     /**
@@ -190,16 +190,16 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme)
                 .setIcon(android.R.drawable.ic_lock_power_off)
-                .setTitle("Encerrar Contagem")
-                .setMessage("Tem certeza que deseja encerrar a contagem?")
-                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.finish_counting)
+                .setMessage(R.string.confirm_closing)
+                .setPositiveButton(R.string.sim, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
 
                 })
-                .setNegativeButton("Não", null)
+                .setNegativeButton(R.string.nao, null)
                 .show();
     }
 
