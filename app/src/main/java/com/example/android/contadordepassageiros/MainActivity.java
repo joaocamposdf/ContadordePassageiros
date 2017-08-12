@@ -20,7 +20,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
     int pax = 0;
     int colo = 0;
     TextView tv;
@@ -140,7 +139,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void menosUm(View view) {
         pax = pax - 1;
-        displayContagem();
+        if (pax >= 0) {
+            displayContagem();
+        } else {
+            Toast.makeText(MainActivity.this, R.string.contagem_negativa, Toast.LENGTH_SHORT).show();
+            pax = 0;
+        }
     }
 
     /**
@@ -166,6 +170,9 @@ public class MainActivity extends AppCompatActivity {
         colo = colo - 1;
         if (colo > 26) {
             displayColos2();
+        } else if (colo < 0) {
+            Toast.makeText(MainActivity.this, R.string.contagem_negativa, Toast.LENGTH_SHORT).show();
+            colo = 0;
         } else {
             displayColos();
         }

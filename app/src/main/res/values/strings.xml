@@ -16,5 +16,6 @@
     <string name="reset_couting">Reiniciar contagem</string>
     <string name="confirm_reset">Deseja reiniciar a contagem de passageiros ?</string>
     <string name="reseting">Reiniciando</string>
+    <string name="contagem_negativa">Contagem negativa!</string>
 
 </resources>
