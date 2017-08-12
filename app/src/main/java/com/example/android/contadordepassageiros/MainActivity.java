@@ -7,12 +7,11 @@
 
 package com.example.android.contadordepassageiros;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
@@ -135,6 +134,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Subtrai 1 passageiro à contagem.
+     * Subtracts 1 adult to the counting.
+     */
+
+    public void menosUm(View view) {
+        pax = pax - 1;
+        displayContagem();
+    }
+
+    /**
      * Soma 1 passageiro de colo à contagem de colos.
      * Adds 1 leap child to the counting.
      */
@@ -147,6 +156,21 @@ public class MainActivity extends AppCompatActivity {
             displayColos();
         }
     }
+
+    /**
+     * Soma 1 passageiro de colo à contagem de colos.
+     * Adds 1 leap child to the counting.
+     */
+
+    public void menosUmColo(View view) {
+        colo = colo - 1;
+        if (colo > 26) {
+            displayColos2();
+        } else {
+            displayColos();
+        }
+    }
+
 
     /**
      * Transforma o número de colos no código utilizado pelos despachantes.

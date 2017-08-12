@@ -53,5 +53,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
+    <style name="AdditionalButtons">
+        <!--<item name="android:layout_margin">8dp</item>-->
+        <item name="android:background">@color/buttonsBackground</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
 </resources>
