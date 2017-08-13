@@ -38,7 +38,7 @@
             style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Contador" />
+            android:text="@string/contador" />
 
         <LinearLayout
             android:layout_width="match_parent"

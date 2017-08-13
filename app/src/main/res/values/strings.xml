@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name">Contador de Passageiros</string>
-    <string name="Contador">Contador de Passageiros</string>
-    <string name="EscolhaLayout">Escolha seu layout:</string>
+    <string name="contador">Contador de Passageiros</string>
     <string name="button_3_pax">+ 3 pax</string>
     <string name="button_2_pax">+ 2 pax</string>
     <string name="button_1_pax">+ 1 pax</string>
     <string name="button_1_colo">+ 1 colo</string>
     <string name="reiniciar">Reiniciar</string>
-    <string name="retrato">Retrato</string>
-    <string name="paisagem">Paisagem</string>
     <string name="nao">Não</string>
     <string name="sim">Sim</string>
     <string name="confirm_closing">Tem certeza que deseja encerrar a contagem?</string>
@@ -17,5 +14,10 @@
     <string name="confirm_reset">Deseja reiniciar a contagem de passageiros ?</string>
     <string name="reseting">Reiniciando</string>
     <string name="contagem_negativa">Contagem negativa!</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="cppp">Formulário CPPP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
