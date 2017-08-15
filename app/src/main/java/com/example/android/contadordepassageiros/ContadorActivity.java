@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class ContadorActivity extends AppCompatActivity {
 
     int pax = 0;
     int colo = 0;
@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Checks the orientation of the screen
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.main);
+            setContentView(R.layout.main_contador);
             displayColos();
             displayContagem();
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(R.layout.main);
+            setContentView(R.layout.main_contador);
             displayColos();
             displayContagem();
         }
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.main_contador);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         tv = (TextView) findViewById(R.id.pax_text_view);
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         if (pax >= 0) {
             displayContagem();
         } else {
-            Toast.makeText(MainActivity.this, R.string.contagem_negativa, Toast.LENGTH_SHORT).show();
+            Toast.makeText(ContadorActivity.this, R.string.contagem_negativa, Toast.LENGTH_SHORT).show();
             pax = 0;
         }
     }
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         if (colo > 26) {
             displayColos2();
         } else if (colo < 0) {
-            Toast.makeText(MainActivity.this, R.string.contagem_negativa, Toast.LENGTH_SHORT).show();
+            Toast.makeText(ContadorActivity.this, R.string.contagem_negativa, Toast.LENGTH_SHORT).show();
             colo = 0;
         } else {
             displayColos();
@@ -195,14 +195,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void reiniciar(View view) {
-        new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme)
+        new AlertDialog.Builder(ContadorActivity.this, R.style.MyDialogTheme)
                 .setTitle(R.string.reset_couting)
                 .setMessage(R.string.confirm_reset)
                 .setIcon(android.R.drawable.ic_menu_revert)
                 .setPositiveButton(R.string.sim, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, R.string.reseting, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ContadorActivity.this, R.string.reseting, Toast.LENGTH_SHORT).show();
                         pax = 0;
                         displayContagem();
                         colo = 0;
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme)
+        new AlertDialog.Builder(ContadorActivity.this, R.style.MyDialogTheme)
                 .setIcon(android.R.drawable.ic_lock_power_off)
                 .setTitle(R.string.finish_counting)
                 .setMessage(R.string.confirm_closing)
