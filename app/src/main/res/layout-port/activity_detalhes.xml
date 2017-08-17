@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.example.android.contadordepassageiros.DetalhesActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_gol_nome" />
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detalhes" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/dados_voo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/voo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Voo"
+                    android:textColor="#000000"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/origem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Origem"
+                    android:textColor="#000000"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textAllCaps="true"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/destino"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Destino"
+                    android:textColor="#000000"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textAllCaps="true"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detalhes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dados_voo"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/adultos_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/adultos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Adultos:"
+                        android:textColor="#000000"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/contagem_adultos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/colos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:padding="16dp"
+                        android:text="Colos:"
+                        android:textColor="#000000"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/contagem_colos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/trip_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tripulantes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Tripulantes:"
+                        android:textColor="#000000"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/menosTrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="menosTrip"
+                        android:padding="16dp"
+                        android:text="-"
+                        android:textSize="30sp"
+                        style="@style/AdditionalButtons"/>
+
+                    <TextView
+                        android:id="@+id/contagem_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/maisTrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="maisTrip"
+                        android:padding="16dp"
+                        android:text="+"
+                        android:textSize="30sp"
+                        style="@style/AdditionalButtons"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/total_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="POB:"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/contagem_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Extras:"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/cmte_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/cmte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Cmte:"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/menosCmte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="menosCmte"
+                        android:padding="16dp"
+                        android:text="-"
+                        style="@style/AdditionalButtons" />
+
+                    <TextView
+                        android:id="@+id/contagem_cmte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/maisCmte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="maisCmte"
+                        android:padding="16dp"
+                        android:text="+"
+                        style="@style/AdditionalButtons" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cop_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Cop:"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/menosCop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="menosCop"
+                        android:padding="16dp"
+                        android:layout_marginStart="12dp"
+                        android:text="-"
+                        style="@style/AdditionalButtons" />
+
+                    <TextView
+                        android:id="@+id/contagem_cop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/maisCop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="maisCop"
+                        android:padding="16dp"
+                        android:text="+"
+                        style="@style/AdditionalButtons" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cms_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Cms:"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/menosCms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="menosCms"
+                        android:padding="16dp"
+                        android:layout_marginStart="6dp"
+                        android:text="-"
+                        style="@style/AdditionalButtons" />
+
+                    <TextView
+                        android:id="@+id/contagem_cms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/maisCms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="maisCms"
+                        android:padding="16dp"
+                        android:text="+"
+                        style="@style/AdditionalButtons" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

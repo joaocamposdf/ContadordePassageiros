@@ -20,8 +20,17 @@ import android.widget.Toast;
 
 public class ContadorActivity extends AppCompatActivity {
 
-    int pax = 0;
-    int colo = 0;
+    public static int pax;
+    public static int colo;
+
+    public static int getPax() {
+        return pax;
+    }
+
+    public static int getColo() {
+        return colo;
+    }
+
     TextView tv;
 
     /**
@@ -36,12 +45,18 @@ public class ContadorActivity extends AppCompatActivity {
         // Checks the orientation of the screen
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.main_contador);
-            displayColos();
-            displayContagem();
+            if (colo > 26) {
+                displayColos2();
+            } else {
+                displayColos();
+            }            displayContagem();
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             setContentView(R.layout.main_contador);
-            displayColos();
-            displayContagem();
+            if (colo > 26) {
+                displayColos2();
+            } else {
+                displayColos();
+            }            displayContagem();
         }
     }
 
@@ -51,8 +66,12 @@ public class ContadorActivity extends AppCompatActivity {
         setContentView(R.layout.main_contador);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        tv = (TextView) findViewById(R.id.pax_text_view);
-        tv.setText(String.valueOf(pax));
+        displayContagem();
+        if (colo > 26) {
+            displayColos2();
+        } else {
+            displayColos();
+        }
     }
 
 

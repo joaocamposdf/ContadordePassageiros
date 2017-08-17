@@ -10,7 +10,7 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textSize">45sp</item>
         <item name="android:background">@color/textBackground</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/buttonsTextColor</item>
         <item name="android:padding">10dp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -23,7 +23,7 @@
         <item name="android:layout_marginLeft">24dp</item>
         <item name="android:layout_marginRight">24dp</item>
         <item name="android:background">@color/buttonsBackground</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/buttonsTextColor</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -34,7 +34,7 @@
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:textSize">30sp</item>
         <item name="android:background">@color/buttonsBackground</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/buttonsTextColor</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -45,7 +45,7 @@
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:textSize">30sp</item>
         <item name="android:background">@color/buttonsBackground</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/buttonsTextColor</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -56,7 +56,7 @@
     <style name="AdditionalButtons">
         <!--<item name="android:layout_margin">8dp</item>-->
         <item name="android:background">@color/buttonsBackground</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/buttonsTextColor</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -64,7 +64,7 @@
     <style name="EditText">
         <!--<item name="android:layout_margin">8dp</item>-->
         <item name="android:background">@color/buttonsBackground</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/buttonsTextColor</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
