@@ -23,8 +23,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
             android:name=".ContadorActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
-        <activity android:name=".EspeciaisActivity"></activity>
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity android:name=".EspeciaisActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
     </application>
 
 </manifest>

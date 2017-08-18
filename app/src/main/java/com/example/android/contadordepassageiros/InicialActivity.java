@@ -50,6 +50,23 @@ public class InicialActivity extends AppCompatActivity {
             }
         });
 
+        // Find the View that shows especiais textview
+        TextView especiais = (TextView) findViewById(R.id.especiais);
+
+        // Set a click listener on that View
+        especiais.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the especiais textview is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link EspeciaisActivity}
+                Intent especiaisIntent = new Intent(InicialActivity.this, EspeciaisActivity.class);
+
+                // Start the new activity
+                startActivity(especiaisIntent);
+            }
+        });
+
+
         // Find the View that shows download_link textview
         TextView downloadLink = (TextView) findViewById(R.id.download_link);
 
@@ -81,7 +98,8 @@ public class InicialActivity extends AppCompatActivity {
                 emailIntent.setData(Uri.parse("mailto:econtador@voegol.com.br")); // only email apps should handle this
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(emailIntent);
-                }    }
+                }
+            }
         });
 
     }
@@ -126,6 +144,23 @@ public class InicialActivity extends AppCompatActivity {
                 }
             });
 
+            // Find the View that shows especiais textview
+            TextView especiais = (TextView) findViewById(R.id.especiais);
+
+            // Set a click listener on that View
+            especiais.setOnClickListener(new View.OnClickListener() {
+                // The code in this method will be executed when the especiais textview is clicked on.
+                @Override
+                public void onClick(View view) {
+                    // Create a new intent to open the {@link EspeciaisActivity}
+                    Intent especiaisIntent = new Intent(InicialActivity.this, EspeciaisActivity.class);
+
+                    // Start the new activity
+                    startActivity(especiaisIntent);
+                }
+            });
+
+
             // Find the View that shows download_link textview
             TextView downloadLink = (TextView) findViewById(R.id.download_link);
 
@@ -157,7 +192,8 @@ public class InicialActivity extends AppCompatActivity {
                     emailIntent.setData(Uri.parse("mailto:econtador@voegol.com.br")); // only email apps should handle this
                     if (emailIntent.resolveActivity(getPackageManager()) != null) {
                         startActivity(emailIntent);
-                    }    }
+                    }
+                }
             });
 
 
@@ -180,6 +216,22 @@ public class InicialActivity extends AppCompatActivity {
                 }
             });
 
+            // Find the View that shows especiais textview
+            TextView especiais = (TextView) findViewById(R.id.especiais);
+
+            // Set a click listener on that View
+            especiais.setOnClickListener(new View.OnClickListener() {
+                // The code in this method will be executed when the especiais textview is clicked on.
+                @Override
+                public void onClick(View view) {
+                    // Create a new intent to open the {@link EspeciaisActivity}
+                    Intent especiaisIntent = new Intent(InicialActivity.this, EspeciaisActivity.class);
+
+                    // Start the new activity
+                    startActivity(especiaisIntent);
+                }
+            });
+
             // Find the View that shows detalhes textview
             TextView detalhes = (TextView) findViewById(R.id.detalhes);
 
@@ -195,6 +247,7 @@ public class InicialActivity extends AppCompatActivity {
                     startActivity(detalhesIntent);
                 }
             });
+
 
             // Find the View that shows download_link textview
             TextView downloadLink = (TextView) findViewById(R.id.download_link);
@@ -227,7 +280,8 @@ public class InicialActivity extends AppCompatActivity {
                     emailIntent.setData(Uri.parse("mailto:econtador@voegol.com.br")); // only email apps should handle this
                     if (emailIntent.resolveActivity(getPackageManager()) != null) {
                         startActivity(emailIntent);
-                    }    }
+                    }
+                }
             });
 
         }

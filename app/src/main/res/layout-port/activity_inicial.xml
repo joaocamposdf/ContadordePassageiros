@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Necessidades especiais" />
+                android:text="@string/especiais" />
 
             <TextView
                 android:id="@+id/formulario"

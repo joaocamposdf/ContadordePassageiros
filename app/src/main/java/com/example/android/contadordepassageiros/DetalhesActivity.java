@@ -142,9 +142,5 @@ public class DetalhesActivity extends AppCompatActivity {
         totalTextView.setText(String.valueOf(total));
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-    }
 }
 
