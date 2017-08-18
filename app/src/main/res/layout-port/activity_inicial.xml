@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="Seja bem vindo ao e-Contador!"
+                android:textColor="#5F5F5F"
                 android:textSize="30sp" />
 
             <TextView
@@ -62,6 +63,23 @@
                 android:layout_margin="16dp"
                 android:text="@string/detalhes" />
 
+            <TextView
+                android:id="@+id/especiais"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Necessidades especiais" />
+
+            <TextView
+                android:id="@+id/formulario"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="eCPPP" />
+
+
 
         </LinearLayout>
 
@@ -76,15 +94,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:text="Download:"
-                android:textSize="24sp" />
+                android:textColor="#5F5F5F"
+                android:textSize="24sp"
+                />
 
             <TextView
                 android:id="@+id/download_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="http://econtador.voegol.com.br:"
-                android:textSize="20sp" />
+                android:text="http://econtador.voegol.com.br"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:autoLink="web"/>
 
             <TextView
                 android:id="@+id/contato"
@@ -92,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:text="Contato:"
+                android:textColor="#5F5F5F"
                 android:textSize="24sp" />
 
             <TextView
@@ -99,8 +122,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="econtador@voegol.com.br:"
-                android:textSize="20sp" />
+                android:text="econtador@voegol.com.br"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:autoLink="email"/>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

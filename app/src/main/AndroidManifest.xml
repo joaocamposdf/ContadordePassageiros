@@ -18,11 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetalhesActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name=".ContadorActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>
+        <activity
+            android:name=".DetalhesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".ContadorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name=".EspeciaisActivity"></activity>
     </application>
 
 </manifest>

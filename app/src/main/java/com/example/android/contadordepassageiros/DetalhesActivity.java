@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import static com.example.android.contadordepassageiros.ContadorActivity.getColo;
@@ -19,7 +18,6 @@ public class DetalhesActivity extends AppCompatActivity {
     public static int cms;
     public static int trip;
     public static int total;
-    public EditText voo;
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {

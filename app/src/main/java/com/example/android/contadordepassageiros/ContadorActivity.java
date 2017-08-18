@@ -231,27 +231,27 @@ public class ContadorActivity extends AppCompatActivity {
                 .setNegativeButton(R.string.nao, null).show();
     }
 
-    /**
+    /*
      * Verifica se o usuário realmente deseja encerrar o app.
      * Verify if the user indeed wants to close the app.
      */
 
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(ContadorActivity.this, R.style.MyDialogTheme)
-                .setIcon(android.R.drawable.ic_lock_power_off)
-                .setTitle(R.string.finish_counting)
-                .setMessage(R.string.confirm_closing)
-                .setPositiveButton(R.string.sim, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-
-                })
-                .setNegativeButton(R.string.nao, null)
-                .show();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        new AlertDialog.Builder(ContadorActivity.this, R.style.MyDialogTheme)
+//                .setIcon(android.R.drawable.ic_lock_power_off)
+//                .setTitle(R.string.finish_counting)
+//                .setMessage(R.string.confirm_closing)
+//                .setPositiveButton(R.string.sim, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        finish();
+//                    }
+//
+//                })
+//                .setNegativeButton(R.string.nao, null)
+//                .show();
+//    }
 
 
 }

@@ -3,7 +3,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#FFFFFF</item>
         <item name="android:background">#FFFFFF</item>
-        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorPrimaryDark">#BBBCBC</item>
     </style>
 
     <style name="TextViewStyle">
