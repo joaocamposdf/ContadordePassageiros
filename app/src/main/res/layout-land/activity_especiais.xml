@@ -1,6 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.example.android.contadordepassageiros.EspeciaisActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_gol_nome_land" />
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="@string/especiais" />
+
+    <LinearLayout
+        android:id="@+id/maximas_layout"
+        style="@style/LayoutsEspeciais">
+
+        <TextView
+            android:id="@+id/maximas"
+            style="@style/EspeciaisTextView"
+            android:text="@string/maximas" />
+
+        <Button
+            android:id="@+id/menosMaximas"
+            style="@style/EspeciaisButtons"
+            android:layout_marginStart="118dp"
+            android:onClick="menosMaximas"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_maximas"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisMaximas"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisMaximas"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/deficientes"
+            style="@style/EspeciaisTextView"
+            android:text="@string/deficientes" />
+
+        <Button
+            android:id="@+id/menosDeficientes"
+            style="@style/EspeciaisButtons"
+            android:layout_marginStart="24dp"
+            android:onClick="menosDeficientes"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_deficientes"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisDeficientes"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisDeficientes"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menor_layout"
+        style="@style/LayoutsEspeciais">
+
+        <TextView
+            android:id="@+id/menor"
+            style="@style/EspeciaisTextView"
+            android:text="@string/menores" />
+
+        <Button
+            android:id="@+id/menosMenores"
+            style="@style/EspeciaisButtons"
+            android:layout_marginStart="124dp"
+            android:onClick="menosMenores"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_menores"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisMenores"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisMenores"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/gestantes"
+            style="@style/EspeciaisTextView"
+            android:text="@string/gestantes" />
+
+        <Button
+            android:id="@+id/menosGestantes"
+            style="@style/EspeciaisButtons"
+            android:layout_marginStart="36dp"
+            android:onClick="menosGestantes"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_gestantes"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisGestantes"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisGestantes"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/carrinhos_layout"
+        style="@style/LayoutsEspeciais">
+
+        <TextView
+            android:id="@+id/carrrinhos"
+            style="@style/EspeciaisTextView"
+            android:text="@string/carrinhos" />
+
+        <Button
+            android:id="@+id/menosCarrinhos"
+            style="@style/EspeciaisButtons"
+            android:layout_marginStart="112dp"
+            android:onClick="menosCarrinhos"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_carrinhos"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisCarrinhos"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisCarrinhos"
+            android:text="+" />
+
+        <TextView
+            style="@style/EspeciaisTextView"
+            android:text="@string/cadeiras_gol" />
+
+        <Button
+            android:id="@+id/menosGol"
+            style="@style/EspeciaisButtons"
+            android:onClick="menosGol"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_gol"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisGol"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisGol"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/proprias_layout"
+        style="@style/LayoutsEspeciais">
+
+        <TextView
+            style="@style/EspeciaisTextView"
+            android:text="@string/cadeiras_proprias" />
+
+        <Button
+            android:id="@+id/menosProprias"
+            style="@style/EspeciaisButtons"
+            android:onClick="menosProprias"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/contagem_proprias"
+            style="@style/EspeciaisTextView"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/maisProprias"
+            style="@style/EspeciaisButtons"
+            android:onClick="maisProprias"
+            android:text="+" />
+
+        <TextView
+            style="@style/EspeciaisTextView"
+            android:text="@string/descem_escadas" />
+
+        <RadioGroup
+            android:id="@+id/escadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/nao_descem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="descemEscadas"
+                android:text="@string/sim"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/sim_descem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="descemEscadas"
+                android:text="@string/nao"
+                android:textSize="30sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
 
 </LinearLayout>
